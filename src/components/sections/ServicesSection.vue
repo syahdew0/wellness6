@@ -63,14 +63,19 @@
             <p class="text-slate-600 text-sm mt-1 max-w-xl leading-relaxed">{{ sectionState.cta.content }}</p>
           </div>
         </div>
-        <a
+        <!-- <a
           :href="sectionState.cta.buttonLink"
           target="_blank"
           class="shrink-0 inline-flex items-center justify-center px-6 py-3 rounded-2xl bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-white font-semibold text-sm shadow-md shadow-red-600/10 hover:shadow-lg hover:shadow-red-600/20 transform hover:-translate-y-0.5 transition-all duration-300 gap-2"
         >
           <span>{{ sectionState.cta.buttonText }}</span>
           <i class="fas fa-arrow-right text-xs"></i>
-        </a>
+        </a> -->
+
+        <router-link :to="sectionState.cta.buttonLink" class="shrink-0 inline-flex items-center justify-center px-6 py-3 rounded-2xl bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-white font-semibold text-sm shadow-md shadow-red-600/10 hover:shadow-lg hover:shadow-red-600/20 transform hover:-translate-y-0.5 transition-all duration-300 gap-2">
+          {{ sectionState.cta.buttonText }}
+          <i class="fas fa-arrow-right text-xs"></i>
+        </router-link>
       </div>
     </div>
   </section>
@@ -137,7 +142,7 @@ const baseSection = {
     title: 'Konsultasi Kulit Gratis',
     content: 'Hubungi tim dokter spesialis kami untuk analisis kulit menyeluruh dan rekomendasi treatment yang tepat.',
     buttonText: 'Mulai Konsultasi',
-    buttonLink: 'https://wa.me/6281234567890'
+    buttonLink: '/contact'
   }
 };
 
